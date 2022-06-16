@@ -20,20 +20,20 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Install Requirements
+      - name: Install Requirements - Flask
         run:  pip install flask
 
-      - name: Install Requirements
+      - name: Install Requirements - Flask WTF
         run:  pip install flask flask-wtf
 
-      - name: Install Requirements
+      - name: Install Requirements - Tox
         run:  pip install tox
 
       - name: Unit Test
         run:  python -m unittest -v test
 
       - name: Run tox
-        run: tox -e py
+        run:  tox -e test
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
