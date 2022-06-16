@@ -30,7 +30,7 @@ jobs:
         run:  pip install tox
 
       - name: Unit Test
-        run:  python -m unittest -v test
+        run:  python -m unittest -v pytest
 
       - name: Run tox
         run:  tox -e py
