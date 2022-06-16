@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 from app import app
 import unittest
-import pytest
 
 class Test(unittest.TestCase):
 
-    @pytest.fixture
     def setUp(self):
         # cria uma instância do unittest, precisa do nome "setUp"
         self.app = app.test_client()
