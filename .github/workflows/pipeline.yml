@@ -26,8 +26,14 @@ jobs:
       - name: Install Requirements
         run:  pip install flask flask-wtf
 
+      - name: Install Requirements
+        run:  pip install tox
+
       - name: Unit Test
-        run: python -m unittest -v test
+        run:  python -m unittest -v test
+
+      - name: Run tox
+        run: tox -e py
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
