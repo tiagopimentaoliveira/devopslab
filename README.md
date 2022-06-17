@@ -1,10 +1,7 @@
 # DevOps Hands On
 
-<a href="https://circleci.com/gh/badges/shields/tree/master">
-        <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status"></a>
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/tiagopimentaoliveira/devopslab/DevOpsLab%20Pipeline?label=DevOpsLab%20Pipeline&style=plastic">
 
-
-<img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/tiagopimentaoliveira/devopslab/main">
-<a href="https://github.com/tiagopimentaoliveira/devopslab/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/tiagopimentaoliveira/devopslab"></a>
+[![QA](https://github.com/SonarSource/sonarqube-quality-gate-action/actions/workflows/run-qa.yml/badge.svg)](https://github.com/SonarSource/sonarqube-quality-gate-action/actions/workflows/run-qa.yml)
 
 Aplicação Simples em Python/Flask com teste usando Unittest
