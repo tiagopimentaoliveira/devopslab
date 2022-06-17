@@ -35,6 +35,26 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.11'
+
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Install Requirements - Flask
+        run:  pip install flask
+
+      - name: Install Requirements - Flask WTF
+        run:  pip install flask flask-wtf
+
+      - name: Install Requirements - Tox
+        run:  pip install tox
+        
+      - name: Unit Test
+        run:  python -m unittest -v pytest
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
