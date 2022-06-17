@@ -1,11 +1,11 @@
 # DevOps Hands On
 
-![DevOpsLab Pipeline](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg)
+![DevOpsLab Pipeline](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml)
 
-![Build](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=build)
+![Build](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml?event=build)
 
-![Quality Gate](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=qualitygate)
+![Quality Gate](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml?event=qualitygate)
 
-![Deploy](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=deploy)
+![Deploy](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml?event=deploy)
 
 Aplicação Simples em Python/Flask com teste usando Unittest
