@@ -2,10 +2,6 @@
 
 ![DevOpsLab Pipeline](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg)
 
-![Build](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=build)
-
-![Quality Gate](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=qualitygate)
-
-![Deploy](https://github.com/tiagopimentaoliveira/devopslab/actions/workflows/pipeline.yml/badge.svg?event=deploy)
+[![Quality Gate Status](https://sonarcloud.io/summary/new_code?id=tiagopimentaoliveira_devopslab&branch=main)](https://sonarcloud.io/summary/new_code?id=tiagopimentaoliveira_devopslab&branch=main)
 
 Aplicação Simples em Python/Flask com teste usando Unittest
