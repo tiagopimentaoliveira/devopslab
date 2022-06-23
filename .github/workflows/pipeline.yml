@@ -100,17 +100,17 @@ jobs:
         run: git push heroku HEAD:main --force
 
       - name: Login to Heroku Container registry
-          env: 
+        env: 
             HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          run: heroku container:login
+        run: heroku container:login
 
-        - name: Docker Image & Push Heroku Registry
-          env:
+      - name: Docker Image & Push Heroku Registry
+        env:
             HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
+        run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
 
-        - name: Deploy Heroku
-          env:
+      - name: Deploy Heroku
+        env:
             HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
+        run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
       
