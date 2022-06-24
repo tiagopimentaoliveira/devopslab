@@ -65,7 +65,7 @@ jobs:
         run:  tox -e py
 
   DeployHom:
-    needs: Build
+    needs: QualityGate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -115,7 +115,7 @@ jobs:
         run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
 
   DeployProd:
-    needs: Build
+    needs: DeployHom
     runs-on: ubuntu-latest
     
     steps:
