@@ -17,4 +17,4 @@ class Test(unittest.TestCase):
 
     def test_conteudo(self):
         # verifica o retorno do conteudo da pagina
-        self.assertEqual(self.result.data.decode('utf-8'), "Hello World com CSRF Protect – 7ASOO – Finale Version – Grupo 17")
+        self.assertEqual(self.result.data.decode('utf-8'), "Hello World com CSRF Protect – 7ASOO – Finale Version – Grupo 17 – Demonstração")
