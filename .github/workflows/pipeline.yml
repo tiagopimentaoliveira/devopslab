@@ -31,41 +31,41 @@ jobs:
       - name: Unit Test
         run:  python -m unittest -v pytest
 
-  QualityGate:
-    needs: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.7.11'
+#  QualityGate:
+#    needs: Build
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Setup Python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: '3.7.11'
+#
+#      - name: Checkout Repo
+#        uses: actions/checkout@v2
 
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+#      - name: Install Requirements - Flask
+#        run:  pip install flask
 
-      - name: Install Requirements - Flask
-        run:  pip install flask
+#      - name: Install Requirements - Flask WTF
+#        run:  pip install flask flask-wtf
 
-      - name: Install Requirements - Flask WTF
-        run:  pip install flask flask-wtf
-
-      - name: Install Requirements - Tox
-        run:  pip install tox
+#      - name: Install Requirements - Tox
+#        run:  pip install tox
         
-      - name: Unit Test
-        run:  python -m unittest -v pytest
+#      - name: Unit Test
+#        run:  python -m unittest -v pytest
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+#      - name: SonarCloud Scan
+#        uses: SonarSource/sonarcloud-github-action@master
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
 
-      - name: Run tox
-        run:  tox -e py
+#      - name: Run tox
+#        run:  tox -e py
 
   Deploy:
-    needs: QualityGate
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
